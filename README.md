@@ -2,7 +2,7 @@
 
 A simple 3D ASCII cube simulation rendered directly in the terminal using ANSI colors and zBuffer depth shading.
 
-![Gameplay Screenshot](source/readme_image.png) 
+![Gameplay Screenshot](readme_image.png) 
 
 ## Prerequisites
 
