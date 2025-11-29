@@ -1,32 +1,50 @@
 # ASCII 3D Rotating Cubes – Nelua
 
-## Project Description
+A simple 3D ASCII cube simulation rendered directly in the terminal using ANSI colors and zBuffer depth shading.
 
-This project is a **3D ASCII cube simulation** written in **Nelua**, displaying **real-time 3D graphics directly in the terminal** using **ASCII characters and ANSI colors**.
+![Gameplay Screenshot](source/readme_image.png) 
 
-## Features
+## Prerequisites
 
-- **3D rotating cubes** rendered directly in the terminal.
-- **Dynamic lighting (Light Shading):** Faces of the cubes are illuminated based on a virtual light source.
-- **Realistic shadows** using a zBuffer to avoid rendering hidden faces.
-- **Depth-based coloring (Z-depth):** Cube faces are colored differently depending on their distance from the camera.
-- **Subtle glow effect:** Adds a glow around the edges to enhance the 3D look.
-- **Terminal-compatible:** Works on Termux, Proot, and Linux terminals.
-- **Customizable:** Easily adjust cube sizes, rotation speed, light direction, and colors.
+You need **Nelua** installed on your system. Additionally, `usleep()` must be available (for Linux, Termux, or Windows with a compatible environment).
 
-## Technologies Used
+*   **Termux / Linux:**
+    ```bash
+    pkg install nelua
+    ```
+*   **Windows:**
+    * Use [WSL](https://learn.microsoft.com/en-us/windows/wsl/) or a terminal that supports `usleep()`.
+    * Install Nelua following the [official instructions](https://nelua.io/download.html).
 
-- **Nelua** (low-level Lua-based language with near C performance)
-- **ANSI escape codes** for terminal colors
-- **zBuffer** for depth management
-- **Dot-product calculations** for light intensity on cube faces
+## Running
 
-## How to Run
+1. Clone or download this repository.
+2. Navigate to the project directory in your terminal.
+3. Run the simulation with:
 
-1. Install Nelua on your system (Termux, Linux, or Windows with `usleep` support).  
-2. Copy the file `advanced_cubes.nelua` to your machine.  
-3. Open a terminal and navigate to the directory containing the file.  
-4. Run the following command:
+*   **Termux / Linux / WSL:**
+    ```bash
+    nelua advanced_cubes.nelua
+    ```
+*   **Windows (with Nelua in PATH):**
+    ```bash
+    nelua advanced_cubes.nelua
+    ```
 
-```bash
-nelua advanced_cubes.nelua
+Make sure your terminal window is large enough to display the cubes properly (recommended ~160x44, although you can experiment).
+
+## Controls
+
+- The cubes **rotate automatically**.
+- Adjust rotation speed and cube size directly in the code via variables:
+    - `cubeWidth` – size of each cube
+    - `A`, `B`, `C` – rotation angles for X, Y, Z
+- Modify light source direction or ANSI color codes to customize shading.
+
+## Cleaning Up
+
+No compilation required, but to stop the simulation, simply press **Ctrl+C** in the terminal.
+
+## License
+
+This project is open-source under the [MIT License](LICENSE).
