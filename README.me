@@ -1,1 +1,32 @@
 
+# ASCII 3D Rotating Cubes – Nelua
+
+## Project Description
+
+This project is a **3D ASCII cube simulation** written in **Nelua**, displaying **real-time 3D graphics directly in the terminal** using **ASCII characters and ANSI colors**.
+
+## Features
+
+- **3D rotating cubes** rendered directly in the terminal.
+- **Dynamic lighting (Light Shading):** Faces of the cubes are illuminated based on a virtual light source.
+- **Realistic shadows** using a zBuffer to avoid rendering hidden faces.
+- **Depth-based coloring (Z-depth):** Cube faces are colored differently depending on their distance from the camera.
+- **Subtle glow effect:** Adds a glow around the edges to enhance the 3D look.
+- **Terminal-compatible:** Works on Termux, Proot, and Linux terminals.
+- **Customizable:** Easily adjust cube sizes, rotation speed, light direction, and colors.
+
+## Technologies Used
+
+- **Nelua** (low-level Lua-based language with near C performance)
+- **ANSI escape codes** for terminal colors
+- **zBuffer** for depth management
+- **Dot-product calculations** for light intensity on cube faces
+
+## How to Run
+
+1. Install Nelua on your system (Termux, Linux, or Windows with usleep support).  
+2. Copy the file `advanced_cubes.nelua` to your machine.  
+3. Run the following command:
+
+```bash
+nelua advanced_cubes.nelua
