@@ -14,7 +14,7 @@ You need **Nelua** installed on your system. Additionally, `usleep()` must be av
     ```
 *   **Windows:**
     * Use [WSL](https://learn.microsoft.com/en-us/windows/wsl/) or a terminal that supports `usleep()`.
-    * Install Nelua following the [official instructions](https://nelua.io/download.html).
+    * Install Nelua following the [official instructions](https://nelua.io/).
 
 ## Running
 
